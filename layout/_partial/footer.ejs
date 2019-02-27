@@ -5,8 +5,9 @@
   <div class="outer">
     <ul class="list-inline">
       <li>&copy; <%= date(new Date(), 'YYYY') %> <%= config.title %></li>
-      <li><%= __('Powered by') %> <a href="http://hexo.io/" target="_blank">Hexo</a></li>
-      <li><%= __('Theme ') %> <a href="https://zhwangart.github.io">zhwangart</a></li>
+      <li><%= __('由') %> <a target="_blank" href="http://hexo.io/" target="_blank">Hexo</a> x <a href="https://zhwangart.github.io">Ocean</a> <%= __('强力驱动') %></li>
+      <!--<li><a target="_blank" href="https://zhwangart.github.io">Ocean by zhwangart</a> <%= __('主题') %></li>-->
+      <li>使用 <a target="_blank" href=<%= config.license_url %>><%= config.license %></a><%= __(' 许可协议') %></li>
       <!--
       <li><a href="/"><%= config.author %></a></li>
       -->
