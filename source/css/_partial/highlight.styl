@@ -5,11 +5,16 @@ highlight-foreground = #4d4d4c
 highlight-comment = #8e908c
 highlight-red = #f2777a
 highlight-orange = #f99157
-highlight-yellow = #ffcc66
-highlight-green = #99cc99
+highlight-light-yellow = #ffcc66
+highlight-light-green = #99cc99
 highlight-aqua = #66cccc
 highlight-blue = #6699cc
 highlight-purple = #cc99cc
+
+highlight-green = #5fdf87
+highlight-brown = #df8787
+highlight-pink = #df5fdf
+highlight-yellow = #eab700
 
 $code-block
   background highlight-background
@@ -146,3 +151,20 @@ pre
   .keyword
   .javascript .function
     color highlight-purple
+
+.cpp
+  pre
+    .keyword
+      color highlight-yellow
+    .meta
+      color highlight-comment
+    .meta-keyword
+      color highlight-pink
+    .string
+    .meta-string
+      color highlight-brown
+    .params
+    .class
+      color highlight-foreground
+    .title
+      color highlight-blue

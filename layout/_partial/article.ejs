@@ -38,7 +38,7 @@
     <%- partial('post/nav') %>
   <% } %>
 
-  <% if (is_post()) { %>
+  <% if (is_post() || post.comment) { %>
     <%- partial('post/gitalk') %>
     <%- partial('post/valine') %>
   <%} %>
