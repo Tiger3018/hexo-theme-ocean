@@ -1,17 +1,4 @@
 <% if (theme.valine.enable) { %>
   <div class="vbefore"></div>
   <div class="valine" id="vcomments"></div>
-  <%- js('https://cdn1.lncld.net/static/js/3.0.4/av-min.js') %>
-  <%- js('https://unpkg.com/valine/dist/Valine.min.js') %>
-  <script type="text/javascript">
-    new Valine({
-      el: '#vcomments' ,
-      appId: '<%- theme.valine.appID %>',
-      appKey: '<%- theme.valine.appKEY %>',
-      notify: <%- theme.valine.notify %>, 
-      verify: <%- theme.valine.verify %>,
-      avatar: '<%- theme.valine.avatar %>', 
-      placeholder: '<%- theme.valine.holder %>' 
-    });  
-  </script>
 <% } %>
