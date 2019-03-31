@@ -17,15 +17,23 @@
   } else if (is_tag()) {
     title = __('tag') + ': ' + page.tag;
   }
+  /** This Script read page.tags.data['xxx'] and join them to a string. **/
+  
+  var db_p, tag_to_key = '';
+  if (page.tags){
+    for(db_p in page.tags.data) {
+      tag_to_key = tag_to_key + page.tags.data[db_p].name + ',';
+    }
+  }
   %>
   <% if (page.keywords){ %>
-    <meta name="keywords" content="<%= page.keywords %>,<%= config.keywords %>">
+    <meta name="keywords" content="<%= tag_to_key %><%= page.keywords %>,<%= config.keywords %>">
   <% } else if (config.keywords){ %>
-    <meta name="keywords" content="<%= config.keywords %>">
+    <meta name="keywords" content="<%= tag_to_key %><%= config.keywords %>">
   <% } %>
   <% if (page.description){ %>
     <meta name="description" content="<%= page.description %>">
-  <% } else if (config.description){ %>
+  <% } else if (config.description && is_archive()){ %>
     <meta name="description" content="<%= config.description %>">
   <% } %>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
